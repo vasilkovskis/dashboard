@@ -54,40 +54,40 @@ dashboard/
 ├── requirements.txt # Python dependencies
 └── README.md
 
-
 ---
 
-### 1. Clone the Repository
+✅ Getting Started
+1. Clone the Repository:
+   git clone https://github.com/yourusername/dashboard.git
+   cd dashboard
 
-```bash
-git clone https://github.com/yourusername/dashboard.git
-cd dashboard
+2. Create and Activate Virtual Environment:
+   python -m venv venv
+   venv\Scripts\activate   # On Windows
+   source venv/bin/activate  # On macOS/Linux
 
-### 2. Create and Activate Virtual Environment (optional but recommended)
+3. Install Dependencies:
+   pip install -r requirements.txt
 
-```bash
-python -m venv venv
-venv\Scripts\activate   # On Windows
-# or
-source venv/bin/activate  # On macOS/Linux
+4. Initialize the Database:
+   python init_db.py
 
-### 3. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-
-### 4. Initialize the Database
-
-```bash
-python init_db.py
-
-### 5. Run the App
-
-```bash
-python app.py
-
-Then open your browser at:
-http://127.0.0.1:5000
-
-### License
+5. Run the App:
+   python app.py
+   
+   Visit http://127.0.0.1:5000
+   
+🔐 Admin Access
+- First registered user becomes Admin.
+- Admin can:
+  - View all users
+  - Add/edit/delete users
+  - Access admin-only pages
+  - 
+📄 License
 This project is for educational and portfolio purposes only.
+
+✍️ Author
+Stanislav Vasilkovski
+GitHub: https://github.com/vasilkovskis
+
