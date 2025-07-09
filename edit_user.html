@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}Edit User{% endblock %}
+{% block content %}
+<h3>Edit User</h3>
+<form method="POST">
+  <div class="mb-3">
+    <label>Name</label>
+    <input type="text" name="name" value="{{ user['name'] }}" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label>Email</label>
+    <input type="email" name="email" value="{{ user['email'] }}" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label>Role</label>
+    <select name="role" class="form-control">
+      <option value="admin" {% if user['role'] == 'admin' %}selected{% endif %}>Admin</option>
+      <option value="editor" {% if user['role'] == 'editor' %}selected{% endif %}>Editor</option>
+      <option value="viewer" {% if user['role'] == 'viewer' %}selected{% endif %}>Viewer</option>
+    </select>
+  </div>
+  <button class="btn btn-success">Save Changes</button>
+</form>
+{% endblock %}
